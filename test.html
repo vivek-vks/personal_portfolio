@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <script src="https://kit.fontawesome.com/3b369dd3f9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <!-- Home section -->
+
+    <div id="header">
+        <div class="container">
+        </div>
+        <div class="header-text">
+            <nav>
+                <ul style="list-style-type:none" id="sidemenu">
+                    <li><a style="color:rgb(136, 133, 138)" href='#header'><b>Home</b></a></li>
+                    <li><a style="color:rgb(146, 146, 146)" href='#about'><b>About</b></a></li>
+                    <li><a style="color:rgb(139, 142, 139)" href='#contact'><b>Contact Me</b></a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <p class="hello">Hello !!</p>
+            <h1>I'm Vivek Kumar</h1>
+            <p class="bio">Persuing a degree in Mechanical & Mechatronics Engineering having an avid interest in coding & management</p>
+            <button class="button1"><a style="color:white; text-decoration:none;" href="/Profile.pdf" download><i class="fa-solid fa-download"></i>   Download CV</a></button>
+        </div>
+    </div>
+
+
+
+
+    <!-- About Section -->
+
+    <div id="about">
+        <div class="container2">
+            <div class="row">
+                <div class="about-col-1">
+                    
+                </div>
+                <div class="about-col-2">
+                    <h2 class="sub-title">About Me</h2>
+                    <p>A highly energized and proactive person aspiring to be an engineer with a unique blend of Engineering competence and an eagerness to learn and develop.
+                        Pursuing a degree in Mechanical & Mechatronics Engineering and an avid interest in coding and management.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Experience</p>
+                            <p class="tab-links" onclick="opentab('experience')">Education</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul >
+                                <li><span>Languages:-</span><br>C, Cpp, Python<i class="fa-brands fa-python"></i></li>
+                                <li><span>Web Dev:-</span><br>HTML <i class="fa-brands fa-html5"></i>, 
+                                      CSS <i class="fa-brands fa-css3-alt"></i>,
+                                       Js <i class="fa-brands fa-js"></i>,
+                                        React <i class="fa-brands fa-react"></i>, 
+                                        Mongo<i class="fa-solid fa-database"></i> </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul >
+                                <li>Summer Intern at Tata Steel</li>
+                                <li>1st Position at Robolympics under Apogee'22 at Bits Pilani</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul >
+                                <li><span>B.Tech MME</span><br>2020-2024 </li>
+                                <li><span>Senior Secondary</span><br>2019-2020</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact section -->
+
+    <div id="contact">
+        <div class="container3">
+            <div class="row">
+                <div class="contact-left">
+                    <div class="sub-title">Let's Connect !!</div>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/v_i_v_e_k_vks/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/vivek-kumar-lnm/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/vivek-vks"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <!-- <a href="/cv.pdf" download class="btn btn2">Download CV</a> -->
+                </div>
+
+                <!-- Form -->
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                    <div >
+                        <h4>Name*:-</h4><br>
+                        <input style="background-color: #b5caca; "type="text" name="Name" placeholder="Your Name" required size="30vw">
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Email*:-</h4><br>
+                        <input style="background-color: #b5caca;" type="email" name="email" placeholder="Your Email" required size="30vw">
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Your Message*</h4><br>
+                        <textarea style="background-color: #b5caca; name="Message" row="5" cols="30vw" placeholder="Your Message*" required ></textarea>
+                        <!-- <input type="text" name="Message" row="6" placeholder="Your Message" size="50vw"> -->
+                    </div><br>
+                        <button class="button2" type="submit"><i class="fa-solid fa-envelope"></i> Submit</button>
+                        <!-- <button type="button" class="btn btn-outline-danger btn-lg">Submit</button> -->
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p><i class="fa-regular fa-copyright"></i> Made by Vivek with <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+
+
+
+    <!-- Js -->
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxlP7iZ7t3HsfnBRTH4ga3e2MosvTqoXGFAg3lRAZOegJlatvDxXUMFdk4npvLU5Wpn_Q/exec';
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent !!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+  <script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+  </script>
+    
+</body>
+</html>
